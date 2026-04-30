@@ -1,0 +1,5 @@
+{
+  "ultimaAtualizacao": "2026-04-30",
+  "resumoAjax": "Estes dados foram carregados dinamicamente via jQuery + AJAX a partir de JS/data.json — útil para manter metadados fora do HTML.",
+  "stackDestaque": ["Cypress", "JavaScript", "CI/CD", "Testes E2E & API"]
+}
