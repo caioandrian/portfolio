@@ -135,9 +135,9 @@
       var $el = $(this);
       var t = $el.attr("data-count");
       if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-        $el.text("+" + t);
+        $el.text(t + "+");
       } else {
-        $el.text("+0");
+        $el.text("0+");
       }
     });
 
