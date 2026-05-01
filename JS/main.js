@@ -267,7 +267,6 @@
 
     wireCarousel();
     wireRevealOnScroll();
-    wireStatCounters();
 
     wireNavClicks();
     wireMobileNav();
