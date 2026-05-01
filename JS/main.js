@@ -165,7 +165,7 @@
           var p = Math.min((ts - t0) / dur, 1);
           var ease = 1 - Math.pow(1 - p, 3);
           var val = Math.round(start + (target - start) * ease);
-          $el.text("+" + val);
+          $el.text(val + "+");
           if (p < 1) requestAnimationFrame(step);
         }
 
