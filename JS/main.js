@@ -130,66 +130,66 @@
     });
   }
 
-  function wireStatCounters() {
-    $(".hero-stat__plus[data-count]").each(function () {
-      var $el = $(this);
-      var t = $el.attr("data-count");
-      if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-        $el.text(t + "+");
-      } else {
-        $el.text("0+");
-      }
-    });
+  // function wireStatCounters() {
+  //   $(".hero-stat__plus[data-count]").each(function () {
+  //     var $el = $(this);
+  //     var t = $el.attr("data-count");
+  //     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  //       $el.text(t + "+");
+  //     } else {
+  //       $el.text("0+");
+  //     }
+  //   });
 
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  //   if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
-    var el = document.querySelector(".hero-stats");
-    if (!el) return;
+  //   var el = document.querySelector(".hero-stats");
+  //   if (!el) return;
 
-    var fired = false;
+  //   var fired = false;
 
-    function run() {
-      if (fired) return;
-      fired = true;
-      $(".hero-stat__plus[data-count]").each(function () {
-        var $el = $(this);
-        var target = parseInt($el.attr("data-count"), 10);
-        if (isNaN(target)) return;
+  //   function run() {
+  //     if (fired) return;
+  //     fired = true;
+  //     $(".hero-stat__plus[data-count]").each(function () {
+  //       var $el = $(this);
+  //       var target = parseInt($el.attr("data-count"), 10);
+  //       if (isNaN(target)) return;
 
-        var start = 0;
-        var dur = 950;
-        var t0 = null;
+  //       var start = 0;
+  //       var dur = 950;
+  //       var t0 = null;
 
-        function step(ts) {
-          if (t0 === null) t0 = ts;
-          var p = Math.min((ts - t0) / dur, 1);
-          var ease = 1 - Math.pow(1 - p, 3);
-          var val = Math.round(start + (target - start) * ease);
-          $el.text(val + "+");
-          if (p < 1) requestAnimationFrame(step);
-        }
+  //       function step(ts) {
+  //         if (t0 === null) t0 = ts;
+  //         var p = Math.min((ts - t0) / dur, 1);
+  //         var ease = 1 - Math.pow(1 - p, 3);
+  //         var val = Math.round(start + (target - start) * ease);
+  //         $el.text(val + "+");
+  //         if (p < 1) requestAnimationFrame(step);
+  //       }
 
-        requestAnimationFrame(step);
-      });
-    }
+  //       requestAnimationFrame(step);
+  //     });
+  //   }
 
-    if ("IntersectionObserver" in window) {
-      var io = new IntersectionObserver(
-        function (entries) {
-          entries.forEach(function (e) {
-            if (e.isIntersecting) {
-              run();
-              io.disconnect();
-            }
-          });
-        },
-        { threshold: 0.25 }
-      );
-      io.observe(el);
-    } else {
-      run();
-    }
-  }
+  //   if ("IntersectionObserver" in window) {
+  //     var io = new IntersectionObserver(
+  //       function (entries) {
+  //         entries.forEach(function (e) {
+  //           if (e.isIntersecting) {
+  //             run();
+  //             io.disconnect();
+  //           }
+  //         });
+  //       },
+  //       { threshold: 0.25 }
+  //     );
+  //     io.observe(el);
+  //   } else {
+  //     run();
+  //   }
+  // }
 
   function loadAjaxMeta() {
     var $box = $("#ajaxMeta");
