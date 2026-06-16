@@ -911,6 +911,30 @@ p:last-child {
   }
 }
 
+#hobby .card {
+  padding: 0.85rem 1rem;
+}
+
+#hobby .project-card h3 {
+  font-size: 0.95rem;
+  margin-bottom: 0.25rem;
+}
+
+#hobby .project-card p {
+  font-size: 0.82rem;
+  margin-bottom: 0.4rem;
+  color: var(--text-muted);
+}
+
+#hobby .project-card__thumb-wrap {
+  max-width: 72px;
+}
+
+#hobby .project-card__row {
+  gap: 0.75rem 1rem;
+  align-items: center;
+}
+
 .tag {
   display: inline-block;
   font-size: 0.75rem;
