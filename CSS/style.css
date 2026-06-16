@@ -949,7 +949,7 @@ p:last-child {
   border-radius: 0;
   border: none;
   box-shadow: none;
-  order: -1;
+  order: 1;
 }
 
 #hobby .project-card--media .project-card__body {
