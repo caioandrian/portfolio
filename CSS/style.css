@@ -1,4 +1,4 @@
-/* Portfùlio QA ù paleta neutra e foco em acessibilidade */
+/* PortfÔøΩlio QA ÔøΩ paleta neutra e foco em acessibilidade */
 :root {
   --bg: #f0f4f3;
   --bg-elevated: #ffffff;
@@ -786,7 +786,7 @@ p:last-child {
   color: var(--accent);
 }
 
-/* Cards genùricos */
+/* Cards genÔøΩricos */
 .card {
   background: var(--bg-elevated);
   border: 1px solid var(--border);
@@ -805,7 +805,7 @@ p:last-child {
   background: #e7e5e4;
 }
 
-/* Lista de problemas / prùticas */
+/* Lista de problemas / prÔøΩticas */
 .two-col-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -864,6 +864,53 @@ p:last-child {
   border-radius: 2px;
 }
 
+.project-card__row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+  gap: 1rem 1.25rem;
+  align-items: start;
+}
+
+.project-card__thumb-wrap {
+  min-width: 0;
+  width: 100%;
+  max-width: 100%;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  background: var(--bg-elevated);
+  overflow: hidden;
+}
+
+.project-card__thumb {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.project-card__body {
+  min-width: 0;
+}
+
+.project-card__body h3 {
+  margin-top: 0;
+}
+
+@media (max-width: 520px) {
+  .project-card__row {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+    gap: 0.75rem 0.85rem;
+  }
+}
+
 .tag {
   display: inline-block;
   font-size: 0.75rem;
@@ -875,7 +922,7 @@ p:last-child {
   margin-bottom: 0.75rem;
 }
 
-/* Formaùùo & certs */
+/* FormaÔøΩÔøΩo & certs */
 .timeline {
   display: flex;
   flex-direction: column;
@@ -1020,7 +1067,7 @@ p:last-child {
   margin: 0;
 }
 
-/* Animaùùo entrada */
+/* AnimaÔøΩÔøΩo entrada */
 .fade-in {
   opacity: 0;
   transform: translateY(16px);
@@ -1042,7 +1089,7 @@ p:last-child {
   }
 }
 
-/* Revelaùùo no scroll (controlada por JS) */
+/* RevelaÔøΩÔøΩo no scroll (controlada por JS) */
 .reveal-on-scroll {
   opacity: 0;
   transform: translateY(14px);
