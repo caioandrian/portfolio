@@ -275,15 +275,6 @@
     $(window).on("scroll", updateActiveNav);
     updateActiveNav();
 
-    if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      $(".project-card").on("mouseenter", function () {
-        $(this).stop(true).animate({ marginTop: "-3px" }, 160);
-      });
-      $(".project-card").on("mouseleave", function () {
-        $(this).stop(true).animate({ marginTop: "0" }, 160);
-      });
-    }
-
     loadAjaxMeta();
   });
 })(jQuery);
