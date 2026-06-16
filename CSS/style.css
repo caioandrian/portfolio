@@ -913,11 +913,13 @@ p:last-child {
 
 #hobby .card {
   padding: 0.85rem 1rem;
+  transition: none;
 }
 
 #hobby .card:hover {
   border-color: var(--border);
   box-shadow: var(--shadow);
+  cursor: default;
 }
 
 #hobby .project-card h3 {
@@ -950,6 +952,7 @@ p:last-child {
   border: none;
   box-shadow: none;
   order: 1;
+  margin-top: auto;
 }
 
 #hobby .project-card--media .project-card__body {
