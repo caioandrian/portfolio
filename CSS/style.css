@@ -796,10 +796,6 @@ p:last-child {
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
-.card:hover {
-  border-color: rgba(15, 118, 110, 0.35);
-  box-shadow: 0 8px 32px rgba(28, 25, 23, 0.1);
-}
 
 .alt-section {
   background: #e7e5e4;
