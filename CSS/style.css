@@ -860,11 +860,17 @@ p:last-child {
   border-radius: 2px;
 }
 
+.project-card--media {
+  display: grid;
+  grid-template-rows: 1fr;
+}
+
 .project-card__row {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
   gap: 1rem 1.25rem;
-  align-items: start;
+  align-items: stretch;
+  height: 100%;
 }
 
 .project-card__thumb-wrap {
@@ -894,6 +900,12 @@ p:last-child {
 
 .project-card__body {
   min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card__body .links {
+  margin-top: auto;
 }
 
 .project-card__body h3 {
@@ -953,6 +965,13 @@ p:last-child {
 
 #hobby .project-card--media .project-card__body {
   padding: 0.75rem 1rem 0.85rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+#hobby .project-card--media .project-card__body .links {
+  margin-top: auto;
 }
 
 .tag {
