@@ -831,6 +831,11 @@ p:last-child {
   gap: 1.5rem;
 }
 
+/* Mantém a largura padrão dos cards mesmo com poucos itens */
+#hobby .project-grid {
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
 .project-card h3 {
   margin-top: 0;
 }
