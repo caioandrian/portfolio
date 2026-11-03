@@ -262,11 +262,52 @@
     });
   }
 
+  var DESC_MAX = 120;
+
+  function wireCardDescriptions() {
+    var $modal = $(
+      '<dialog class="desc-modal" aria-labelledby="descModalTitle">' +
+        '<h3 id="descModalTitle"></h3>' +
+        '<p class="desc-modal__text"></p>' +
+        '<button type="button" class="btn btn-primary desc-modal__close">Fechar</button>' +
+      "</dialog>"
+    ).appendTo("body");
+    var modal = $modal[0];
+
+    $modal.on("click", ".desc-modal__close", function () {
+      modal.close();
+    });
+    // Fecha ao clicar fora do conteúdo
+    $modal.on("click", function (e) {
+      if (e.target === modal) modal.close();
+    });
+
+    $(".project-card p").each(function () {
+      var $p = $(this);
+      var full = $.trim($p.text());
+      if (full.length <= DESC_MAX) return;
+
+      var cut = full.slice(0, DESC_MAX);
+      var lastSpace = cut.lastIndexOf(" ");
+      if (lastSpace > 0) cut = cut.slice(0, lastSpace);
+      cut = cut.replace(/[\s.,;:!?-]+$/, "");
+
+      var title = $.trim($p.closest(".project-card").find("h3").first().text());
+      var $more = $('<button type="button" class="desc-more">ver mais</button>').on("click", function () {
+        $modal.find("h3").text(title);
+        $modal.find(".desc-modal__text").text(full);
+        modal.showModal();
+      });
+      $p.text(cut + "... ").append($more);
+    });
+  }
+
   $(function () {
     $("#year").text(new Date().getFullYear());
 
     wireCarousel();
     wireRevealOnScroll();
+    wireCardDescriptions();
 
     wireNavClicks();
     wireMobileNav();
