@@ -919,40 +919,47 @@ p:last-child {
   }
 }
 
-#hobby .card {
+#hobby .card,
+#qaqe .card {
   padding: 0.85rem 1rem;
   transition: none;
 }
 
-#hobby .card:hover {
+#hobby .card:hover,
+#qaqe .card:hover {
   border-color: var(--border);
   box-shadow: var(--shadow);
   cursor: default;
 }
 
-#hobby .project-card h3 {
+#hobby .project-card h3,
+#qaqe .project-card h3 {
   font-size: 0.95rem;
   margin-bottom: 0.25rem;
 }
 
-#hobby .project-card p {
+#hobby .project-card p,
+#qaqe .project-card p {
   font-size: 0.82rem;
   margin-bottom: 0.4rem;
   color: var(--text-muted);
 }
 
-#hobby .project-card--media {
+#hobby .project-card--media,
+#qaqe .project-card--media {
   display: flex;
   flex-direction: column;
   overflow: hidden;
   padding: 0;
 }
 
-#hobby .project-card--media .project-card__row {
+#hobby .project-card--media .project-card__row,
+#qaqe .project-card--media .project-card__row {
   display: contents;
 }
 
-#hobby .project-card--media .project-card__thumb-wrap {
+#hobby .project-card--media .project-card__thumb-wrap,
+#qaqe .project-card--media .project-card__thumb-wrap {
   width: 100%;
   max-width: 100%;
   aspect-ratio: 16 / 7;
@@ -963,14 +970,16 @@ p:last-child {
   margin-top: auto;
 }
 
-#hobby .project-card--media .project-card__body {
+#hobby .project-card--media .project-card__body,
+#qaqe .project-card--media .project-card__body {
   padding: 0.75rem 1rem 0.85rem;
   flex: 1;
   display: flex;
   flex-direction: column;
 }
 
-#hobby .project-card--media .project-card__body .links {
+#hobby .project-card--media .project-card__body .links,
+#qaqe .project-card--media .project-card__body .links {
   margin-top: auto;
 }
 
