@@ -1307,3 +1307,9 @@ p:last-child {
   display: block;
   margin-left: auto;
 }
+
+.btn-icon {
+  flex-shrink: 0;
+  margin-right: 0.5rem;
+  vertical-align: -0.2em;
+}
